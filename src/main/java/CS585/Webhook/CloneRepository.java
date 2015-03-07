@@ -11,20 +11,24 @@ import org.eclipse.jgit.api.errors.TransportException;
 
 
 /**
- * Simple snippet which shows how to clone a repository from a remote source
- *
  * @author Roshan Rathod
+ * 
+ * 
+ * Clones a Github Repository 
+ * Uses JGIT library
+ * 
  */
 public class CloneRepository {
 
-    
+    public static File Repository_directory ; 
 
-    public CloneRepository(String URL) throws IOException, InvalidRemoteException, TransportException, GitAPIException {
-        // prepare a new folder for the cloned repository
-        File localPath = new File("C:\\GitHub Repo Clone\\");
+    public static void run(String URL, String email) throws IOException, InvalidRemoteException, TransportException, GitAPIException, InterruptedException {
+        
+    	// prepare a new folder for cloning the repository
+        File localPath = File.createTempFile("GitRepository", "");
         localPath.delete();
 
-        // then clone
+        // Clone the repository in the temporary directory
         System.out.println("Cloning from " + URL + " to " + localPath);
         Git result = Git.cloneRepository()
                 .setURI(URL)
@@ -32,9 +36,17 @@ public class CloneRepository {
                 .call();
 
         try {
-	        // Note: the call() returns an opened repository already which needs to be closed to avoid file handle leaks!
-	        System.out.println("Having repository: " + result.getRepository().getDirectory());
+	      
+        	
+        	//Get the repository directory name (parent directory)
+        	Repository_directory = result.getRepository().getDirectory().getParentFile();
+        	
+        	//Run Mutation Tests using PITEST maven commands on the directory
+        	MutationTests.run(Repository_directory,email);
+        	
+	        System.out.println("Repository at: " + Repository_directory);
         } finally {
+        	//Close the opened github repository to avoid file handle leaks
         	result.close();
         }
     }

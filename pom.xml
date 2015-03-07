@@ -46,6 +46,17 @@
 			<artifactId>org.eclipse.jgit</artifactId>
 			<version>3.7.0.201502260915-r</version>
 		</dependency>
+		<dependency>
+			<groupId>org.zeroturnaround</groupId>
+			<artifactId>zt-zip</artifactId>
+			<version>1.8</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
 
 	</dependencies>
 
