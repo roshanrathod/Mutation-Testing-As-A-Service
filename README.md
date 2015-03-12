@@ -45,8 +45,8 @@ Start the program from webhook.java.
 - Springboot running on localhost:8080/payload will fetch the post and extract Github Repository URL and Email.
 - JGIT will Clone the Repository in your TEMP folder.
 - Once cloned, you will see new cmd prompt window.
-- Maven will first build the project and then run mutation test on the project
-- The test reports folder is to ZIP using [zeroturnaround/zt-zip](https://github.com/zeroturnaround/zt-zip)
+- Maven will first build the project and then run mutation tests on the project.(By default it runs test on the root of the package, so all classes will have a mutation test report which is created under target folder called pit-reports. For further reading, [refer this](http://pitest.org/quickstart/maven/))
+- The test reports folder is compressed to a ZIP archive using [zeroturnaround/zt-zip](https://github.com/zeroturnaround/zt-zip)(Awesome Library!)
 - An email will be sent with the ZIP as an attachment to the committer using [Java Mail API](https://java.net/projects/javamail/pages/Home)
 
 
@@ -61,7 +61,7 @@ NOTE:
 - Mutation Tests will ONLY work with MAVEN projects, since it runs maven commands.
 
 
-To use this code / make any contributions / for any further questions please contact : roshan.rathod@gmail.com
+To use this code / make any contributions / for any further questions or help please email me at roshan.rathod@gmail.com
 
 
 
