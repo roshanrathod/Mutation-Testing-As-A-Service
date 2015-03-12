@@ -52,14 +52,17 @@ Start the program from webhook.java.
 
 --------------------------------
 
-NOTE:
+NOTES / Possible Errors:
 
 - This will not work without proper maven installation.
 - If ngrok is not in c: drive, modify the location in ngrokserver.java
 - Springboot, javax and JGIT dependenices are in pom.xml
 - PITest plugin is not added to pom.xml, since it downloads on its on and runs the tests. If any issues, please [add plugin from PITest site](http://pitest.org/quickstart/maven/)
 - Mutation Tests will ONLY work with MAVEN projects, since it runs maven commands.
-
+-JGIT seems to be really slow at times, so please be patient when it clones the repository(it might look program is not working, but it is)
+- Ignore warning or errors in ngrok/github webhook response/eclipe or whichever IDE you use. It works regardless of the http response or errors in IDE which are due to the http responses
+- Make sure NO OTHER PROGRAM IS RUNNING ON OR USING http://localhost:8080. In that case SpringBoot wont work and you shall get Tomcat initialization error.
+- Also, make sure you stop the program from IDE stop button AS WELL AS IDE's output/console windows stop button before restating or re-running it. You shall get Tomcat Initialization error. If it continues, close the IDE and start again, it should work fine.
 
 To use this code / make any contributions / for any further questions or help please email me at roshan.rathod@gmail.com
 
