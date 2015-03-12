@@ -1,4 +1,4 @@
-# Github-Webhook
+# Mutation Testing As A Service(MTaaS) for Github Repositories
 
 Uses **Github's Webhook** feature to receive HTTP POST and Run Mutation tests and send an email to the committer who made the changes.
 
