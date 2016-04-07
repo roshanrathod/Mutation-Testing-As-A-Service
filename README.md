@@ -27,9 +27,9 @@ This project uses:
 
 For the program to run *without making any changes*:
 
-[Download ngrok](https://ngrok.com/download) and unzip it into you C: drive, **C:\ngrok**. This folder will contain an exe which start a server when you run this program.
+[Download ngrok](https://ngrok.com/download) and unzip it into you C: drive, **C:\ngrok**. This folder will contain an exe which starts a server when you run this program.
 
-ngrok exposes localhost URL to Internet
+ngrok exposes localhost URL to the Internet.
 
 
 [Download and install maven](http://maven.apache.org/download.cgi)
@@ -55,7 +55,7 @@ Start the program from webhook.java.
 NOTES / Possible Errors:
 
 - This will not work without proper maven installation.
-- If ngrok is not in c: drive, modify the location in ngrokserver.java
+- If ngrok is not in C: drive, modify the location in ngrokserver.java
 - Springboot, javax and JGIT dependenices are in pom.xml
 - Mutation Tests will ONLY work with MAVEN projects, since it runs maven commands.
 - JGIT seems to be really slow at times, so please be patient when it clones the repository(it might look program is not working, but it is)
@@ -63,7 +63,7 @@ NOTES / Possible Errors:
 - Make sure NO OTHER PROGRAM IS RUNNING ON OR USING http://localhost:8080. In that case SpringBoot wont work and you shall get Tomcat initialization error.
 - Also, make sure you stop the program from IDE stop button AS WELL AS IDE's output/console windows stop button before restating or re-running it. You shall get Tomcat Initialization error. If it continues, close the IDE and start again, it should work fine.
 
-To use this code / make any contributions / for any further questions or help please email me at roshan.rathod@gmail.com
+To use this code / make any contributions / for any further questions or help please contact me
 
 
 
