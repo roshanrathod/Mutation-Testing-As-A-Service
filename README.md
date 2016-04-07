@@ -6,7 +6,7 @@ Uses **Github's Webhook** feature to receive HTTP POST and Run Mutation tests an
 --------------------------------
 
 #### Requirements 
-- Windows OS (Since it contains runs tests and server on command prompt)
+- Windows OS (Since it runs tests and server on command prompt)
 - [NGROK](https://ngrok.com)
 - [Maven](http://maven.apache.org/) 
 
